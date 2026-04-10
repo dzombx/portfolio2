@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { useCallback, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Monitor, Palette, Rocket, GitBranch, ExternalLink, Hash } from "lucide-react"
+import { Monitor, Palette, Rocket, GitBranch, ExternalLink, Hash, Mail, Phone } from "lucide-react"
 import { Spotlight } from "@/components/ui/spotlight"
 import { ContainerTextFlip } from "@/components/ui/container-text-flip"
 import { Card } from "@/components/ui/card"
@@ -168,11 +168,25 @@ export default function Home() {
                     View My Work
                   </Button>
                 </Link>
-                <Link href="/contact">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                    Contact Me
-                  </Button>
-                </Link>
+              </motion.div>
+
+              {/* Contact Details */}
+              <motion.div variants={itemVariants} className="flex flex-col gap-3">
+                <a
+                  href="mailto:trevordzombo@gmail.com"
+                  className="group inline-flex items-center gap-3 text-foreground/80 hover:text-foreground transition-colors w-fit"
+                >
+                  <Mail className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <span className="text-base sm:text-lg">trevordzombo@gmail.com</span>
+                </a>
+
+                <a
+                  href="tel:+254792267516"
+                  className="group inline-flex items-center gap-3 text-foreground/80 hover:text-foreground transition-colors w-fit"
+                >
+                  <Phone className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <span className="text-base sm:text-lg">+254 792 267516</span>
+                </a>
               </motion.div>
 
               {/* Social Icons */}
